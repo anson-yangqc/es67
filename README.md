@@ -26,3 +26,9 @@
 	})
 	</script>
 ```
+```
+导出 export default two; 导入 import fn from 'a.js'; 使用 a.two();
+导出 export one; export two ; 导入 import {two} from 'a.js' 
+错误 export 3; export {one:20}
+正确 export var one = 3  ; var one=20;export {one}
+```
