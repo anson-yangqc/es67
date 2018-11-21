@@ -1,0 +1,29 @@
+```
+<script>
+		var one = {
+			init:function(){
+				console.log(this.data) //100
+			},
+			data:100
+		}
+		one.init()//指向one
+		//等同 window.one.init()
+
+		var two = {
+			init:()=>{
+				console.log(this)
+			}
+		}
+		two.init();//指向window
+		//等同 window.two.init();//指向window
+
+		var three = {
+			init(){
+				console.log(this.data) //100
+			},
+			data:100
+		}
+		three.init();
+		//等同 window.three.init();//指向three 和 one 一致
+	</script>
+  ```
