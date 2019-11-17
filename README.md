@@ -28,9 +28,10 @@
 ```
 
 ```
+//7妙后打印2 =》 再过2秒后打印3 =》 再打印0
+//如果去掉 await two() 异步7秒后打印2，同时2秒后打印3 =》 再打印0
 <script type="text/javascript">
 	async function one(argument) {
-
 		// var one1 = two();
 		// var two1 = three();
 		// await one1;
