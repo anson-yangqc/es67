@@ -26,6 +26,41 @@
 	})
 	</script>
 ```
+
+```
+<script type="text/javascript">
+	async function one(argument) {
+
+		// var one1 = two();
+		// var two1 = three();
+		// await one1;
+		// await two1;
+
+		await two();
+		await three();
+		console.log(0);
+	}
+	function two(argument) {
+		return new Promise(function(reslove,reject){
+			setTimeout(function(){
+				console.log('2');
+				reslove(2);
+			},7000)
+		})
+	}
+
+	function three(argument) {
+		return new Promise(function(reslove,reject){
+			setTimeout(function(){
+				console.log('3');
+				reslove(3);
+			},2000)
+		})
+	}
+	one();
+</script>
+```
+
 ```
 导出 export default two; 导入 import fn from 'a.js'; 使用 a.two();
 导出 export one; export two ; 导入 import {two} from 'a.js' 
